@@ -13,10 +13,10 @@ from ibm_cloud_sdk_core import ApiException
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 def main(dict): 
-    authenticator = IAMAuthenticator("fBILR7THckxF-Rb0dYDqhJD2vqSxcPgmMHcjI3mSrFrQ")
+    authenticator = IAMAuthenticator("API_KEY")
     service = CloudantV1(authenticator = authenticator)
         
-    service.set_service_url("https://8b1da65f-617d-47f5-a0d3-b66086257f66-bluemix.cloudantnosqldb.appdomain.cloud")
+    service.set_service_url("COUCH_URL")
         
     response = service.post_find(
         db= "reviews",
